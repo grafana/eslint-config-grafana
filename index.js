@@ -8,17 +8,13 @@ module.exports = {
       jsx: true,
     },
   },
-
   settings: {
     react: {
       version: "detect",
     },
   },
-
   plugins: ["jsdoc", "prettier", "@typescript-eslint", "react-hooks"],
-
   extends: ["plugin:react-hooks/recommended", "plugin:prettier/recommended"],
-
   parser: "@typescript-eslint/parser",
   rules: {
     curly: "error",
