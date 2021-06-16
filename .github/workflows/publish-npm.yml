@@ -54,4 +54,4 @@ jobs:
         if: steps.version_check.outputs.changed == 'true'
         run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GH_PACKAGE_TOKEN }}
