@@ -14,23 +14,6 @@ or:
 npm install @grafana/eslint-config --save-dev
 ```
 
-Don't forget to install peerDependencies.
-
-1. Install the correct versions of each package, which are listed by the command:
-
-```sh
-npm info "@grafana/eslint-config@latest" peerDependencies
-```
-
-If using **npm 5+**, use this shortcut
-
-```sh
-npx install-peerdeps --dev @grafana/eslint-config
-```
-
-If using **yarn**, you can also use the shortcut described above if you have npm 5+ installed on your machine, as the command will detect that you are using yarn and will act accordingly.
-Otherwise, run `npm info "@grafana/eslint-config@latest" peerDependencies` to list the peer dependencies and versions, then run `yarn add --dev <dependency>@<version>` for each listed peer dependency.
-
 ## Usage
 
 ```json
