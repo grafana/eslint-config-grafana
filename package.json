@@ -2,7 +2,7 @@
   "author": "Grafana Labs",
   "license": "Apache-2.0",
   "name": "@grafana/eslint-config",
-  "version": "7.0.0",
+  "version": "8.0.0",
   "description": "Grafana's ESLint config",
   "keywords": [
     "grafana",
