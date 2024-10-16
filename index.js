@@ -11,7 +11,7 @@ module.exports = {
       version: "detect",
     },
   },
-  plugins: ["jsdoc", "@typescript-eslint", "react-hooks"],
+  plugins: ["jsdoc", "@typescript-eslint", "@stylistic/ts", "react-hooks"],
   extends: [
     "plugin:react-hooks/recommended",
     "plugin:react/recommended",
@@ -69,7 +69,7 @@ module.exports = {
     "@typescript-eslint/no-unused-vars": "off",
     "@typescript-eslint/no-use-before-define": "off",
     "@typescript-eslint/triple-slash-reference": "error",
-    "@typescript-eslint/type-annotation-spacing": [
+    "@stylistic/ts/type-annotation-spacing": [
       "error",
       {
         after: true,
