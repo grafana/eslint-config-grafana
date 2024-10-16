@@ -22,7 +22,7 @@ Don't forget to install peerDependencies.
 npm info "@grafana/eslint-config@latest" peerDependencies
 ```
 
-If using **npm 5+**, use this shortcut
+If using **npm 5+**, use this command:
 
 ```sh
 npx install-peerdeps --dev @grafana/eslint-config
@@ -31,7 +31,9 @@ npx install-peerdeps --dev @grafana/eslint-config
 If using **yarn**, you can also use the shortcut described above if you have npm 5+ installed on your machine, as the command will detect that you are using yarn and will act accordingly.
 Otherwise, run `npm info "@grafana/eslint-config@latest" peerDependencies` to list the peer dependencies and versions, then run `yarn add --dev <dependency>@<version>` for each listed peer dependency.
 
-## Usage
+## Configuration (legacy: .eslintrc\*)
+
+Extend our configuration to get reasonable defaults:
 
 ```json
 {
@@ -40,6 +42,58 @@ Otherwise, run `npm info "@grafana/eslint-config@latest" peerDependencies` to li
 ```
 
 It will automatically handle `*.(js|ts|tsx)` files.
+
+## Configuration (new: eslint.config.js)
+
+From v8.21.0, Eslint supported a new flat config system where `eslint.config.js` replaces `.eslintrc*` as the default config file name. Eslint@8.x supports both systems, while Eslint@9.x only supports the new flat config.
+
+A guide on how to migrate to a flat config can be found [here](https://eslint.org/docs/latest/extend/plugin-migration-flat-config).
+
+The following official blog posts are available for interested parties:
+
+- https://eslint.org/blog/2022/08/new-config-system-part-1/
+- https://eslint.org/blog/2022/08/new-config-system-part-2/
+- https://eslint.org/blog/2022/08/new-config-system-part-3/
+
+This package contains a single flat config object which can be imported like so:
+
+```js
+const grafanaConfig = require("@grafana/eslint-config/flat");
+
+/**
+ * @type {Array<import('eslint').Linter.Config>}
+ */
+module.exports = [
+  {
+    grafanaConfig,
+  },
+];
+```
+
+You are then free to add/override properties.
+
+Note: Our shareable configs does not preconfigure `files`, `ignore`, or `languageOptions.globals`. For most of the cases, you probably want to configure some properties for your project.
+
+```js
+const grafanaConfig = require("@grafana/eslint-config/flat");
+
+/**
+ * @type {Array<import('eslint').Linter.Config>}
+ */
+module.exports = [
+  {
+    ignores: [".github", ".yarn", "**/build/", "**/compiled/", "**/dist/"],
+  },
+  grafanaConfig,
+  {
+    name: "myproject/defaults",
+    files: ["**/*.{ts,tsx,js,jsx}"],
+    rules: {
+      // add custom rules here.
+    },
+  },
+];
+```
 
 ## Publishing
 
