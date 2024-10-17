@@ -20,7 +20,8 @@
   },
   "files": [
     "index.js",
-    "flat.js"
+    "flat.js",
+    "base.js"
   ],
   "devDependencies": {
     "@stylistic/eslint-plugin-ts": "^2.9.0",
