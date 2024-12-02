@@ -64,7 +64,7 @@ const grafanaConfig = require("@grafana/eslint-config/flat");
  */
 module.exports = [
   {
-    grafanaConfig,
+    ...grafanaConfig,
   },
 ];
 ```
