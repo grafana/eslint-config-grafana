@@ -1,3 +1,4 @@
+// @ts-check
 const jsdoc = require("eslint-plugin-jsdoc");
 const reactHooksPlugin = require("eslint-plugin-react-hooks");
 const reactPlugin = require("eslint-plugin-react");
@@ -11,23 +12,24 @@ const baseConfig = require("./base");
 /**
  * @type {Array<import('eslint').Linter.Config>}
  */
-module.exports = {
-  name: "@grafana/eslint-config/flat",
-  ...reactHooksPlugin.configs.recommended,
-  ...reactPlugin.configs.flat.recommended,
-  ...prettierConfig,
-  settings: baseConfig.settings,
-  plugins: {
-    jsdoc,
-    "@typescript-eslint": tsPlugin,
-    "react-hooks": reactHooksPlugin,
-    "@stylistic/ts": stylisticTs,
+module.exports = [
+  reactHooksPlugin.configs["recommended-latest"],
+  reactPlugin.configs.flat.recommended,
+  prettierConfig,
+  {
+    name: "@grafana/eslint-config/flat",
+    settings: baseConfig.settings,
+    plugins: {
+      jsdoc,
+      "@typescript-eslint": tsPlugin,
+      "@stylistic/ts": stylisticTs,
+    },
+    languageOptions: {
+      parser: typescriptParser,
+      ecmaVersion: baseConfig.ecmaVersion,
+      sourceType: baseConfig.sourceType,
+      parserOptions: baseConfig.parserOptions,
+    },
+    rules: baseConfig.rules,
   },
-  languageOptions: {
-    parser: typescriptParser,
-    ecmaVersion: baseConfig.ecmaVersion,
-    sourceType: baseConfig.sourceType,
-    parserOptions: baseConfig.parserOptions,
-  },
-  rules: baseConfig.rules,
-};
+];
