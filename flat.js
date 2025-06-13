@@ -1,4 +1,3 @@
-// @ts-check
 const jsdoc = require("eslint-plugin-jsdoc");
 const reactHooksPlugin = require("eslint-plugin-react-hooks");
 const reactPlugin = require("eslint-plugin-react");
@@ -9,9 +8,6 @@ const stylisticTs = require("@stylistic/eslint-plugin-ts");
 
 const baseConfig = require("./base");
 
-/**
- * @type {Array<import('eslint').Linter.Config>}
- */
 module.exports = [
   reactHooksPlugin.configs["recommended-latest"],
   reactPlugin.configs.flat.recommended,
