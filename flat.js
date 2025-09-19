@@ -4,7 +4,7 @@ const reactPlugin = require("eslint-plugin-react");
 const tsPlugin = require("@typescript-eslint/eslint-plugin");
 const typescriptParser = require("@typescript-eslint/parser");
 const prettierConfig = require("eslint-config-prettier");
-const stylisticTs = require("@stylistic/eslint-plugin-ts");
+const stylistic = require("@stylistic/eslint-plugin");
 
 const baseConfig = require("./base");
 
@@ -18,7 +18,7 @@ module.exports = [
     plugins: {
       jsdoc,
       "@typescript-eslint": tsPlugin,
-      "@stylistic/ts": stylisticTs,
+      "@stylistic": stylistic,
     },
     languageOptions: {
       parser: typescriptParser,

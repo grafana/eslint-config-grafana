@@ -60,7 +60,7 @@ const baseConfig = {
     "@typescript-eslint/no-unused-vars": "off",
     "@typescript-eslint/no-use-before-define": "off",
     "@typescript-eslint/triple-slash-reference": "error",
-    "@stylistic/ts/type-annotation-spacing": [
+    "@stylistic/type-annotation-spacing": [
       "error",
       {
         after: true,

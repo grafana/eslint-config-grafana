@@ -7,7 +7,7 @@ module.exports = {
     ...baseConfig.parserOptions,
   },
   settings: baseConfig.settings,
-  plugins: ["jsdoc", "@typescript-eslint", "@stylistic/ts", "react-hooks"],
+  plugins: ["jsdoc", "@typescript-eslint", "@stylistic", "react-hooks"],
   extends: [
     "plugin:react-hooks/recommended",
     "plugin:react/recommended",
