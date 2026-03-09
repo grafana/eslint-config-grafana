@@ -3,7 +3,6 @@
 ## 10.0.0
 
 - Add typescript declaration
-- Support Eslint 10
 
 - **Breaking**: Drop support for eslint 8
 - **Breaking**: Drop support for legacy configs
