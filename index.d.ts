@@ -1,4 +1,5 @@
-// Typing this as Linter.Config[] should work but causes lots of type errors in grafana/grafana.
-declare const config: Record<string, unknown>[];
+import { Linter } from "eslint";
+
+declare const config: Linter.Config[];
 
 export default config;

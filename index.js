@@ -6,7 +6,7 @@ import typescriptParser from "@typescript-eslint/parser";
 import prettierConfig from "eslint-config-prettier";
 import stylistic from "@stylistic/eslint-plugin";
 
-const config = [
+export default [
   reactHooksPlugin.configs.flat["recommended"],
   reactPlugin.configs.flat.recommended,
   prettierConfig,
@@ -112,5 +112,3 @@ const config = [
     },
   },
 ];
-
-export default config;
