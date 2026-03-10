@@ -5,8 +5,7 @@
 - Add typescript declaration
 - Replace @stylistic/eslint-plugin-ts with @stylistic/eslint-plugin
 
-- **Breaking**: Drop support for eslint 8
-- **Breaking**: Drop support for legacy configs
+- **Breaking**: Drop support for eslint 7 and legacy configs
 - **Breaking**: Make package ESM
 
 ## 9.0.0
