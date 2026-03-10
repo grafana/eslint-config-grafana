@@ -7,7 +7,7 @@ import prettierConfig from "eslint-config-prettier";
 import stylistic from "@stylistic/eslint-plugin";
 
 export default [
-  reactHooksPlugin.configs.flat["recommended"],
+  reactHooksPlugin.configs.flat.recommended,
   reactPlugin.configs.flat.recommended,
   prettierConfig,
   {
