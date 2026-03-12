@@ -98,17 +98,6 @@ export default [
       ],
       "@stylistic/arrow-spacing": ["error", { after: true, before: true }],
       "react-hooks/exhaustive-deps": "error",
-
-      // disable the following react-hooks rules for easy adoption in grafana/grafana
-      "react-hooks/refs": "off",
-      "react-hooks/set-state-in-effect": "off",
-      "react-hooks/immutability": "off",
-      "react-hooks/preserve-manual-memoization": "off",
-      "react-hooks/purity": "off",
-      "react-hooks/static-components": "off",
-      "react-hooks/use-memo": "off",
-      "react-hooks/incompatible-library": "off",
-      "react-hooks/unsupported-syntax": "off",
     },
   },
 ];
