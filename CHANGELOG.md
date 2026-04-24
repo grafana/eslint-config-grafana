@@ -2,6 +2,7 @@
 
 ## 10.0.0
 
+- Support Eslint 10
 - Add typescript declaration
 - Replace @stylistic/eslint-plugin-ts with @stylistic/eslint-plugin
 
