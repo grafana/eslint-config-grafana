@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> This repository has been archived and the eslint-config package now lives at https://github.com/grafana/plugin-tools.
+
 # grafana-eslint-config
 
 > Grafana's [ESLint](https://eslint.org) config.
