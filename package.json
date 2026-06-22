@@ -14,6 +14,7 @@
   },
   "version": "10.0.0",
   "description": "Grafana's ESLint config",
+  "homepage": "https://github.com/grafana/eslint-config-grafana#readme",
   "keywords": [
     "grafana",
     "eslint",
@@ -25,7 +26,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "http://github.com/grafana/eslint-config-grafana.git"
+    "url": "git+https://github.com/grafana/eslint-config-grafana.git"
+  },
+  "bugs": {
+    "url": "https://github.com/grafana/eslint-config-grafana/issues"
   },
   "publishConfig": {
     "access": "public"
